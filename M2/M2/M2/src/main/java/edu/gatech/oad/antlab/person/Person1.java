@@ -5,8 +5,8 @@ package edu.gatech.oad.antlab.person;
  *  returns their name and a
  *  modified string 
  *  
- *  @author Bob
- *  @version 1.1
+ *  @author Joe Fahey
+ *  @version 1.2
  */
 public class Person1 {
   /** Holds the persons real name */
@@ -30,8 +30,9 @@ public class Person1 {
 	 * @return the modified string
 	 */
 	private String calc(String input) {
-	  //Person 1 put your implementation here
-	  return null;
+	  String partial = input.substring(0,2); //makes a substring of first two char of input
+	  String end = input.substring(2); //creates a substring of all char after first two of input
+	  return end + partial; //concatenates the two substrings to emulate rotating two chars
 	}
 	
 	/**
