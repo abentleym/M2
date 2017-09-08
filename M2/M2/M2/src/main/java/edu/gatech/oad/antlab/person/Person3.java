@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 /**
  *  A simple class for person 3
  *  returns their name and a
