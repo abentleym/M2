@@ -3,3 +3,12 @@ Implementation-Title: 'M2'
 Implementation-Version: 1.0
 
 Main-Class: edu.gatech.oad.antlab.pkg1.AntLabMain
+Class-Path: ../../../lib/resources.jar
+
+
+jar {
+  manifest {
+    attributes(
+      'Class-Path': configurations.compile.collect { it.getName() }.join(' '))
+  }
+}
