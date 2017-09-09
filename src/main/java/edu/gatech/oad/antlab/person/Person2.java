@@ -1,6 +1,6 @@
 package edu.gatech.oad.antlab.person;
 import java.util.Collections;
-import java.util.Random ;
+import java.util.List;
 /**
  *  A simple class for person 2
  *  returns their name and a
@@ -31,7 +31,7 @@ public class Person2 {
 	 * @return the modified string
 	 */
 	private String calc(String input) {
-	  List<Character> output = input.toArray();
+	  List<Character> output = input.toCharArray();
         Collections.shuffle(output);
         String marth = "";
         for (int i = 0;i < output.length(); i++) {
