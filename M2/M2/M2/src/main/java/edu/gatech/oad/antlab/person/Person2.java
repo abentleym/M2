@@ -34,7 +34,7 @@ public class Person2 {
 	  List<Character> output = input.toArray();
         Collections.shuffle(output);
         String marth = "";
-        for (int i = 0;output.length(); i++) {
+        for (int i = 0;i < output.length(); i++) {
             marth += output[i];
         }
         return marth;
