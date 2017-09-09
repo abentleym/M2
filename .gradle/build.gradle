@@ -13,6 +13,10 @@ defaultTasks 'jar'
 
 sourceSets.main.java.srcDirs = ["src"]
 
+dependencies {
+	//compile files('lib/resources.jar')
+	compile fileTree(dir: 'lib', include: ['resources.jar'])
+}
 //Define the contents of the jar file
 jar  {
 	manifest {
@@ -20,11 +24,13 @@ jar  {
                  'Implementation-Version' : version,
                  'Main-Class' : 'edu.gatech.oad.antlab.pkg1.AntLabMain'
     }
+	
+   manifest {
+      attributes(
+         'Manifest-Version': '1.0',
+         'Class-Path': configurations.compile.collect { it.getName() }.join(' ')
+      )
+   }
       destinationDir = file('.')
       archiveName = 'helpNandanIDontKnowWhatImDoing.jar'
-}
-
-dependencies {
-	//compile files('lib/resources.jar')
-	compile fileTree(dir: 'lib', include: ['resources.jar'])
 }
